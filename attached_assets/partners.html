@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOTECO - Reference</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#cf2e2e',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        .partner-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
+        .grid-item {
+            border-radius: 0.5rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body class="text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 flex items-center">
+                        <img class="h-8 w-auto" src="https://soteco.rs/wp-content/uploads/2023/02/soteco-logo.png" alt="Soteco logo">
+                    </a>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#" class="nav-link text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium sr-only">Početna</a>
+                    <a href="products.html" class="nav-link text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium sr-only">Proizvodi</a>
+                    <a href="services.html" class="nav-link text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium sr-only">Usluge</a>
+                    <a href="partners.html" class="nav-link text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium sr-only">Partneri</a>
+                    <a href="about.html" class="nav-link text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium sr-only">O nama</a>
+                    <a href="contact.html" class="nav-link text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium sr-only">Kontakt</a>
+                    
+                    <a href="index.html" class="nav-link text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium en-only">Home</a>
+                    <a href="products.html" class="nav-link text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium en-only">Products</a>
+                    <a href="services.html" class="nav-link text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium en-only">Services</a>
+                    <a href="partners.html" class="nav-link text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium en-only">Partners</a>
+                    <a href="about.html" class="nav-link text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium en-only">About</a>
+                    <a href="contact.html" class="nav-link text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium en-only">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="language-toggle">
+                        <button id="sr-btn" class="active">SR</button>
+                        <button id="en-btn">EN</button>
+                    </div>
+                    <button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 sr-only">Reference</h1>
+                <p class="text-xl mb-8 max-w-3xl mx-auto sr-only">SOTECO D.O.O. uspešno posluje već više od 25 godina. Za tih 20 godina stvorili smo uspešnu saradnju sa velikim brojem kompanija iz regiona.</p>
+                
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 en-only">References</h1>
+                <p class="text-xl mb-8 max-w-3xl mx-auto en-only">SOTECO D.O.O. has been successfully operating for more than 25 years. During those 20 years we have established successful cooperation with a large number of companies from the region.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Clients Grid -->
+        <section class="mb-20">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <!-- Client 1 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2024/01/Moravka-400x209.png" alt="Moravka" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 2 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2024/01/Devolli-400x209.jpg" alt="Devolli" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 3 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/actavis-logo-flat-520x245-1-400x209.png" alt="Actavis" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 4 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/alkaloid-logo-1-300x134-1.png" alt="Alkaloid" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 5 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/aura-400x203.png" alt="Aura" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 6 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/bambi-400x213.jpeg" alt="Bambi" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 7 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/biljana-1-400x237.png" alt="Biljana" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 8 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/bosnalijek-logo-400x213.jpeg" alt="Bosnalijek" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 9 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/Centro-proizvod-400x200.png" alt="Centro proizvod" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 10 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/Centropak-400x213.png" alt="Centropak" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 11 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/farmakos-400x200.png" alt="Farmakos" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 12 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/formapharm-400x207.png" alt="Formapharm" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 13 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/Fructus-logo-400x203.png" alt="Fructus" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 14 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/Galenika_logo-400x200.jpeg" alt="Galenika" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 15 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/hemofarm-1-400x215.jpeg" alt="Hemofarm" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 16 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/herba-400x169.jpeg" alt="Herba" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 17 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/Jugoremedija-400x214.png" alt="Jugoremedija" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 18 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/kirka-logo-400x205.jpeg" alt="Kirka" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 19 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/Kondiva-400x201.png" alt="Kondiva" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 20 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/logo-replek-farm-400x163.jpeg" alt="Replek Farm" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 21 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/Mladegs-pak_sasocial_facebook_push-400x175.jpeg" alt="Mladegs Pak" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 22 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/mlekara-subotica_660x330-400x200.jpeg" alt="Mlekara Subotica" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 23 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/mlekoprodukt-400x208.jpeg" alt="Mlekoprodukt" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 24 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/Nestle.svg_-400x206.png" alt="Nestle" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 25 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/Plantago-copy-400x232.jpeg" alt="Plantago" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 26 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/polimark-grupa-400x200.jpeg" alt="Polimark Grupa" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 27 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/seti-400x208.jpeg" alt="Seti" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 28 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/slaviamed-400x163.png" alt="Slaviamed" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 29 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/Soko-Stark-400x213.jpeg" alt="Soko Stark" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 30 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/Stada-Logo-copy-400x198.jpeg" alt="Stada" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 31 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/stevan-still-400x145.png" alt="Stevan Still" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 32 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/swiaalion-takovo-logo-400x164.jpeg" alt="Swisslion Takovo" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 33 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/torlak-400x210.png" alt="Torlak" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 34 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/varus-400x201.png" alt="Varus" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 35 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/vispak-400x216.jpeg" alt="Vispak" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 36 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/yumis-400x210.jpeg" alt="Yumis" class="h-24 object-contain partner-logo">
+                </div>
+                
+                <!-- Client 37 -->
+                <div class="grid-item bg-white p-6 flex items-center justify-center h-40">
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/Zdravlje-400x170.jpeg" alt="Zdravlje" class="h-24 object-contain partner-logo">
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="mb-20">
+            <div class="bg-primary text-white rounded-xl p-12 text-center">
+                <h2 class="text-3xl font-bold mb-4 sr-only">Spremni za saradnju?</h2>
+                <p class="text-xl mb-8 max-w-3xl mx-auto sr-only">Kontaktirajte naš tim stručnjaka i dobijte personalizovanu ponudu za vaše potrebe.</p>
+                
+                <h2 class="text-3xl font-bold mb-4 en-only">Ready to cooperate?</h2>
+                <p class="text-xl mb-8 max-w-3xl mx-auto en-only">Contact our team of experts and get a personalized offer for your needs.</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#" class="bg-white text-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300 sr-only">Pošaljite upit</a>
+                    <a href="#" class="border-2 border-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-primary transition duration-300 sr-only">Pozovite nas</a>
+                    
+                    <a href="#" class="bg-white text-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300 en-only">Send inquiry</a>
+                    <a href="#" class="border-2 border-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-primary transition duration-300 en-only">Call us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="https://soteco.rs/wp-content/uploads/2023/02/soteco-logo.png" alt="Soteco logo" class="h-8 mb-6">
+                    <p class="text-gray-400 mb-6 sr-only">SOTECO je vodeći proizvođač i dobavljač specijalizovane opreme i tehnologije sa preko 30 godina iskustva na tržištu.</p>
+                    <p class="text-gray-400 mb-6 en-only">SOTECO is a leading manufacturer and supplier of specialized equipment and technology with over 30 years of experience in the market.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 sr-only">Proizvodi</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white sr-only">Industrijski ventilator</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white sr-only">Centrifugalni ventilator</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white sr-only">Aksijalni ventilator</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white sr-only">Specijalni ventilator</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white sr-only">Dodatna oprema</a></li>
+                        
+                        <h3 class="text-lg font-semibold mb-4 en-only">Products</h3>
+                        <li><a href="#" class="text-gray-400 hover:text-white en-only">Industrial fan</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white en-only">Centrifugal fan</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white en-only">Axial fan</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white en-only">Special fan</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white en-only">Additional equipment</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 sr-only">Usluge</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white sr-only">Projektovanje</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white sr-only">Proizvodnja</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white sr-only">Montaža</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white sr-only">Servis</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white sr-only">Održavanje</a></li>
+                        
+                        <h3 class="text-lg font-semibold mb-4 en-only">Services</h3>
+                        <li><a href="#" class="text-gray-400 hover:text-white en-only">Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white en-only">Manufacturing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white en-only">Installation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white en-only">Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white en-only">Maintenance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 sr-only">Kontakt</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                            <span class="text-gray-400">Trgovačka 16a, Beograd, SRB</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-primary"></i>
+                            <span class="text-gray-400">+381 24 123 456</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary"></i>
+                            <span class="text-gray-400">info@soteco.rs</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-primary"></i>
+                            <span class="text-gray-400 sr-only">Pon-Pet: 08:00 - 16:00</span>
+                            <span class="text-gray-400 en-only">Mon-Fri: 08:00 - 16:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0 sr-only">© 2023 SOTECO d.o.o. Sva prava zadržana.</p>
+                <p class="text-gray-500 text-sm mb-4 md:mb-0 en-only">© 2023 SOTECO d.o.o. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-white text-sm sr-only">Uslovi korišćenja</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm sr-only">Politika privatnosti</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm sr-only">Cookies</a>
+                    
+                    <a href="#" class="text-gray-500 hover:text-white text-sm en-only">Terms of use</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm en-only">Privacy policy</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm en-only">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const srBtn = document.getElementById('sr-btn');
+            const enBtn = document.getElementById('en-btn');
+            
+            // Set initial language (Serbian)
+            document.documentElement.lang = 'sr';
+            
+            srBtn.addEventListener('click', function() {
+                document.documentElement.lang = 'sr';
+                srBtn.classList.add('active');
+                enBtn.classList.remove('active');
+                
+                // Hide all English elements
+                document.querySelectorAll('.en-only').forEach(el => {
+                    el.style.display = 'none';
+                });
+                
+                // Show all Serbian elements
+                document.querySelectorAll('.sr-only').forEach(el => {
+                    el.style.display = 'block';
+                });
+            });
+            
+            enBtn.addEventListener('click', function() {
+                document.documentElement.lang = 'en';
+                enBtn.classList.add('active');
+                srBtn.classList.remove('active');
+                
+                // Hide all Serbian elements
+                document.querySelectorAll('.sr-only').forEach(el => {
+                    el.style.display = 'none';
+                });
+                
+                // Show all English elements
+                document.querySelectorAll('.en-only').forEach(el => {
+                    el.style.display = 'block';
+                });
+            });
+            
+            // Simple JavaScript for mobile menu toggle
+            const mobileMenuButton = document.querySelector('.md\\:hidden');
+            const navLinks = document.querySelector('.md\\:flex');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                navLinks.classList.toggle('hidden');
+                navLinks.classList.toggle('flex');
+                navLinks.classList.toggle('flex-col');
+                navLinks.classList.toggle('absolute');
+                navLinks.classList.toggle('top-16');
+                navLinks.classList.toggle('left-0');
+                navLinks.classList.toggle('right-0');
+                navLinks.classList.toggle('bg-white');
+                navLinks.classList.toggle('shadow-md');
+                navLinks.classList.toggle('p-4');
+                navLinks.classList.toggle('space-y-4');
+                navLinks.classList.toggle('space-x-8');
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
