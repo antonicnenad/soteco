@@ -344,6 +344,9 @@ export class MemStorage implements IStorage {
     const contactMessage: ContactMessage = {
       ...message,
       id,
+      phone: message.phone || null,
+      company: message.company || null,
+      privacy: message.privacy ?? false,
       createdAt: new Date(),
       processed: false
     };
