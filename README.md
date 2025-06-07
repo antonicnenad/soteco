@@ -75,3 +75,4 @@ Clear cache: Delete node_modules and run npm install again
 Browser cache: Hard refresh the browser (Cmd+Shift+R)
 The application should now be running locally with all bilingual functionality and professional design intact.
 # soteco
+# soteco
