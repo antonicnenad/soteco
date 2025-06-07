@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { TeamMember as TeamMemberType } from '@/lib/types';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface TeamMemberProps {
   member: TeamMemberType;
@@ -16,6 +16,9 @@ export function TeamMember({ member }: TeamMemberProps) {
           src={member.image}
           alt={member.name}
           className="w-full h-64 object-cover"
+          onError={(e) => {
+            e.currentTarget.src = '/images/team/placeholder.jpg';
+          }}
         />
       </div>
       <CardContent className="p-6 text-center">

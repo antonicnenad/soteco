@@ -1,6 +1,6 @@
 import { Link } from 'wouter';
 import { Facebook, Linkedin, Youtube, Phone, Mail, MapPin } from 'lucide-react';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/context/LanguageContext';
 
 export function Footer() {
   const { t } = useLanguage();

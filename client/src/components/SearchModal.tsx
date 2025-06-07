@@ -3,7 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Search, X } from 'lucide-react';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface SearchModalProps {
   open: boolean;
@@ -27,14 +27,7 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
         <DialogHeader>
           <DialogTitle className="flex items-center justify-between">
             {t.common.searchSite}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => onOpenChange(false)}
-              className="h-6 w-6 p-0"
-            >
-              <X className="h-4 w-4" />
-            </Button>
+            
           </DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSearch} className="space-y-4">

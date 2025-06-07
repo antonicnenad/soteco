@@ -5,7 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Search, Menu } from 'lucide-react';
 import { LanguageToggle } from './LanguageToggle';
 import { SearchModal } from './SearchModal';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/context/LanguageContext';
 
 export function Navigation() {
   const { t } = useLanguage();
@@ -22,7 +22,15 @@ export function Navigation() {
     { href: '/contact', label: t.nav.contact },
   ];
 
-  const NavLink = ({ href, children, mobile = false }: { href: string; children: React.ReactNode; mobile?: boolean }) => {
+  const NavLink = ({
+    href,
+    children,
+    mobile = false,
+  }: {
+    href: string;
+    children: React.ReactNode;
+    mobile?: boolean;
+  }) => {
     const isActive = location === href;
     const className = mobile
       ? `block px-3 py-2 text-base font-medium ${
@@ -33,7 +41,11 @@ export function Navigation() {
         }`;
 
     return (
-      <Link href={href} className={className} onClick={() => mobile && setIsMobileMenuOpen(false)}>
+      <Link
+        href={href}
+        className={className}
+        onClick={() => mobile && setIsMobileMenuOpen(false)}
+      >
         {children}
       </Link>
     );
@@ -44,6 +56,7 @@ export function Navigation() {
       <nav className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
+            {/* Logo */}
             <div className="flex items-center">
               <Link href="/" className="flex-shrink-0 flex items-center">
                 <img
@@ -63,17 +76,22 @@ export function Navigation() {
               ))}
             </div>
 
+            {/* Right controls */}
             <div className="flex items-center space-x-4">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setIsSearchOpen(true)}
-                className="p-2"
-              >
-                <Search className="h-5 w-5" />
-              </Button>
+              {/* Desktop Search Button */}
+              <div className="hidden md:block">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setIsSearchOpen(true)}
+                  className="p-2"
+                >
+                  <Search className="h-5 w-5" />
+                </Button>
+              </div>
+
               <LanguageToggle />
-              
+
               {/* Mobile menu button */}
               <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
                 <SheetTrigger asChild>
@@ -88,6 +106,20 @@ export function Navigation() {
                         {item.label}
                       </NavLink>
                     ))}
+
+                    {/* Mobile Search Button */}
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => {
+                        setIsSearchOpen(true);
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className="flex items-center gap-2 justify-start mt-4 px-3 text-gray-700"
+                    >
+                      <Search className="h-5 w-5" />
+                      <span>{t.common.search}</span>
+                    </Button>
                   </div>
                 </SheetContent>
               </Sheet>

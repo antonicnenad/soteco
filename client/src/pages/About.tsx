@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { TeamMember } from '@/components/TeamMember';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/context/LanguageContext';
 import { Link } from 'wouter';
 import { TeamMember as TeamMemberType } from '@/lib/types';
 
@@ -9,31 +9,31 @@ import { TeamMember as TeamMemberType } from '@/lib/types';
 const mockTeam: TeamMemberType[] = [
   {
     id: '1',
-    name: 'Marko Petrović',
-    position: { sr: 'Glavni Inženjer', en: 'Chief Engineer' },
-    description: { sr: '15+ godina iskustva u projektovanju industrijskih sistema', en: '15+ years experience in industrial systems design' },
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
+    name: 'Siniša Mitrović',
+    position: { sr: 'Generalni Direktor', en: 'General Manager' },
+    description: { sr: '30+ godina iskustva u projektovanju industrijskih sistema', en: '30+ years experience in industrial systems design' },
+    image: '/images/team/sinisa-mitrovic.jpeg',
   },
   {
     id: '2',
-    name: 'Ana Jovanović',
-    position: { sr: 'Menadžer Projekata', en: 'Project Manager' },
+    name: 'Jelena Marković',
+    position: { sr: 'Projekt Menadžer', en: 'Project Manager' },
     description: { sr: 'Stručnjak za upravljanje kompleksnim projektima', en: 'Expert in managing complex projects' },
-    image: 'https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
+    image: '/images/team/jelena-markovic.jpeg',
   },
   {
     id: '3',
-    name: 'Stefan Nikolić',
-    position: { sr: 'Tehnički Direktor', en: 'Technical Director' },
+    name: 'Radenko Marković',
+    position: { sr: 'Menadžer Prodaje', en: 'Sales Manager' },
     description: { sr: '20+ godina iskustva u tehničkim rešenjima', en: '20+ years experience in technical solutions' },
-    image: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
+    image: '/images/team/radenko-markovic.jpeg',
   },
   {
     id: '4',
-    name: 'Milica Stošić',
-    position: { sr: 'Kontrola Kvaliteta', en: 'Quality Control' },
-    description: { sr: 'Sertifikovani stručnjak za standarde kvaliteta', en: 'Certified quality standards specialist' },
-    image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
+    name: 'Slobodan Mitrović',
+    position: { sr: 'In Memoriam', en: 'In Memoriam' },
+    description: { sr: '', en: '' },
+    image: '/images/team/Slobodan.jpeg',
   },
 ];
 

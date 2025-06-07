@@ -2,7 +2,7 @@ import { Calendar, ArrowRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { NewsItem } from '@/lib/types';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/context/LanguageContext';
 import { Link } from 'wouter';
 
 interface NewsCardProps {

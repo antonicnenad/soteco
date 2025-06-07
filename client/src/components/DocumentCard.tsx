@@ -2,7 +2,7 @@ import { Download, FileText, File, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Document } from '@/lib/types';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface DocumentCardProps {
   document: Document;

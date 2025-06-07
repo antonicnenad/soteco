@@ -1,10 +1,10 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Phone, Mail, MapPin, Clock, Car } from 'lucide-react';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/context/LanguageContext';
 import { ContactForm } from '@/components/ContactForm';
 
 export default function Contact() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <div className="min-h-screen">
@@ -95,7 +95,7 @@ export default function Contact() {
             {/* Map */}
             <div>
               <h2 className="text-2xl font-bold mb-6">
-                {t.language === 'sr' ? 'Pronađite nas' : 'Find us'}
+                {language === 'sr' ? 'Pronađite nas' : 'Find us'}
               </h2>
 
               <div className="rounded-xl overflow-hidden shadow-lg mb-6" style={{ height: '400px' }}>
@@ -129,7 +129,7 @@ export default function Contact() {
                       <h4 className="font-semibold">Parking</h4>
                     </div>
                     <p className="text-gray-600 text-sm">
-                      {t.language === 'sr' 
+                      {language === 'sr' 
                         ? 'Besplatan parking za posetioce ispred objekta'
                         : 'Free parking for visitors in front of the building'
                       }
@@ -152,10 +152,10 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              {t.language === 'sr' ? 'Dodatne informacije' : 'Additional information'}
+              {language === 'sr' ? 'Dodatne informacije' : 'Additional information'}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t.language === 'sr' 
+              {language === 'sr' 
                 ? 'Sve što trebate da znate o saradnji sa SOTECO-m'
                 : 'Everything you need to know about working with SOTECO'
               }
@@ -171,10 +171,10 @@ export default function Contact() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-4">
-                  {t.language === 'sr' ? 'Besplatna procena' : 'Free assessment'}
+                  {language === 'sr' ? 'Besplatna procena' : 'Free assessment'}
                 </h3>
                 <p className="text-gray-600">
-                  {t.language === 'sr' 
+                  {language === 'sr' 
                     ? 'Pružamo besplatnu procenu vaših potreba i izvodljivosti projekta'
                     : 'We provide free assessment of your needs and project feasibility'
                   }
@@ -190,10 +190,10 @@ export default function Contact() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-4">
-                  {t.language === 'sr' ? 'Brz odgovor' : 'Quick response'}
+                  {language === 'sr' ? 'Brz odgovor' : 'Quick response'}
                 </h3>
                 <p className="text-gray-600">
-                  {t.language === 'sr' 
+                  {language === 'sr' 
                     ? 'Odgovaramo na sve upite u roku od 24 časa'
                     : 'We respond to all inquiries within 24 hours'
                   }
@@ -209,10 +209,10 @@ export default function Contact() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-4">
-                  {t.language === 'sr' ? 'Stručni tim' : 'Expert team'}
+                  {language === 'sr' ? 'Stručni tim' : 'Expert team'}
                 </h3>
                 <p className="text-gray-600">
-                  {t.language === 'sr' 
+                  {language === 'sr' 
                     ? 'Naš tim stručnjaka je uvek dostupan za konsultacije'
                     : 'Our team of experts is always available for consultations'
                   }

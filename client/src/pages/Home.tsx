@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Utensils, Pill, Package, Headset, Factory, Fan } from 'lucide-react';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/context/LanguageContext';
 import { TestimonialCard } from '@/components/TestimonialCard';
 import { NewsCard } from '@/components/NewsCard';
 import { DocumentCard } from '@/components/DocumentCard';
@@ -164,7 +164,7 @@ export default function Home() {
                   </Button>
                 </Link>
                 <Link href="/contact">
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                  <Button variant="outline" className="bg-white text-primary hover:bg-gray-100">
                     {t.home.hero.contactUs}
                   </Button>
                 </Link>
@@ -354,7 +354,7 @@ export default function Home() {
                 {t.cta.requestQuote}
               </Button>
             </Link>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button variant="outline" className="bg-white text-primary hover:bg-gray-100">
               {t.cta.callUs}
             </Button>
           </div>

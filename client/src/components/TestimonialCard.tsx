@@ -1,7 +1,7 @@
 import { Star, Quote } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Testimonial } from '@/lib/types';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface TestimonialCardProps {
   testimonial: Testimonial;

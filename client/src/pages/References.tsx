@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function References() {
   const { t } = useLanguage();

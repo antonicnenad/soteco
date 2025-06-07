@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Calendar, ArrowLeft, Search, Clock } from 'lucide-react';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/context/LanguageContext';
 import { NewsCard } from '@/components/NewsCard';
 import { NewsItem } from '@/lib/types';
 import { Link } from 'wouter';
